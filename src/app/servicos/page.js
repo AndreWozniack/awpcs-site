@@ -1,10 +1,11 @@
-// src/app/servicos/page.js
 import Services from '@/components/Services';
+import Gallery from '@/components/Gallery';
 
 export default function PaginaDeServicos() {
   return (
-    <div className="py-16">
+    <>
       <Services />
-    </div>
+      <Gallery />
+    </>
   );
 }

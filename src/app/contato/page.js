@@ -1,10 +1,11 @@
+
 import Contact from '@/components/Contact';
 
 export default function PaginaDeContato() {
-  // O componente Contact agora ocupa a página inteira
   return (
-    <div className="flex-grow flex items-center justify-center">
-        <Contact />
+    // Removido o flex para o componente usar a largura total
+    <div>
+      <Contact />
     </div>
   );
 }
