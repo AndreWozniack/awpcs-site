@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <header className="font-mono w-full bg-aw-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+    <header className="font-mono w-full bg-aw-dark/60 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
       <nav className="container mx-auto flex items-trealo justify-between p-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -17,7 +17,7 @@ export default function Navbar() {
         
         {/* Links de Navegação */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="/servicos" className="hover:text-aw-green transition-colors">
+          <Link href="/" className="hover:text-aw-green transition-colors">
            Home
           </Link>
           <Link href="/servicos" className="hover:text-aw-green transition-colors">
