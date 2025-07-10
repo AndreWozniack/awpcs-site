@@ -1,5 +1,5 @@
 // src/components/Footer.js
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,9 +7,13 @@ export default function Footer() {
   return (
     <footer className="w-full bg-black py-8 px-4">
       <div className="container mx-auto text-center text-gray-500">
-        <Link href="/" className="text-xl font-mono text-aw-green hover:text-white transition-colors mb-4 inline-block">
-          AW PCs
-        </Link>
+        <Image
+          src="/logo.png"
+          alt="Logo AWPCS"
+          width={60}
+          height={60}
+          className="mx-auto mb-4"
+        />
         <p>
           &copy; {currentYear} AWPCS. Todos os direitos reservados.
         </p>

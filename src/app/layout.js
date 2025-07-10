@@ -2,6 +2,10 @@
 import { Inter, Press_Start_2P } from 'next/font/google';
 import './globals.css';
 
+// Componentes que serão compartilhados em todas as páginas
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -21,8 +25,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} ${pressStart2P.variable} bg-aw-dark text-gray-200 font-sans`}>
-        {children}
+      <body className={`${inter.variable} ${pressStart2P.variable} bg-aw-dark text-gray-200 font-sans flex flex-col min-h-screen`}>
+        <Navbar />
+        {/* 'children' será o conteúdo específico de cada página (page.js) */}
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
