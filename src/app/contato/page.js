@@ -1,11 +1,9 @@
-
 import Contact from '@/components/Contact';
 
 export default function PaginaDeContato() {
   return (
-    // Removido o flex para o componente usar a largura total
-    <div>
-      <Contact />
+    <div className="w-full max-w-6xl mx-auto p-6 rounded-lg">
+        <Contact />
     </div>
   );
 }

@@ -34,9 +34,8 @@ export default function Contact() {
     window.location.href = url;
   };
 
-  // ...e o resto do seu return JSX continua aqui sem nenhuma alteração
   return (
-    <section id="contato" className="w-full bg-gray-900/50 py-20 px-4">
+    <section id="contato" className=" bg-gray-900/50 py-20 px-4">
       {/* ... seu JSX ... */}
        <div className="bg-aw-dark/30 p-8 rounded-lg shadow-2xl text-left space-y-6">
           {/* Campo Nome */}
@@ -50,7 +49,7 @@ export default function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-4 focus:ring-2 focus:ring-aw-green focus:border-aw-green transition"
-              placeholder="Como podemos te chamar?"
+              placeholder="Como posso te chamar?"
             />
           </div>
 

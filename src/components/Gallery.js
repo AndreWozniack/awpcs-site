@@ -1,7 +1,5 @@
-// src/components/Gallery.js
 import Image from 'next/image';
 
-// Adicione aqui os nomes dos arquivos das suas imagens
 const projectImages = [
   'build1.jpg',
   'build2.jpg',
