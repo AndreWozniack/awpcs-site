@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <header className="font-mono w-full bg-aw-dark/60 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
-      <nav className="container mx-auto flex items-trealo justify-between p-4">
+      <nav className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -32,7 +32,7 @@ export default function Navbar() {
         </div>
 
         {/* Botão de Orçamento */}
-        <Link href="/contato" className="bg-aw-green text-aw-dark font-bold py-2 px-3 rounded hover:bg-white transition-colors">
+        <Link href="/contato" className="bg-aw-green text-aw-dark font-bold py-2 px-3 rounded hover:bg-white transition-colors h-full flex items-center">
           Faça seu Orçamento
         </Link>
       </nav>

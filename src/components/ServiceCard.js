@@ -1,27 +1,28 @@
 // src/components/ServiceCard.js
 
-import Image from 'next/image'; // Se estiver usando Next.js, para otimização
+import Image from 'next/image';
 import Link from 'next/link';
 
-// Usando a cor do tema que definimos antes!
 const accentColor = "aw-green"; 
 
 const ServiceCard = ({ service, reverse = false }) => (
-  <div className={`flex flex-col md:flex-row ${reverse ? 'md:flex-row-reverse' : ''} items-center gap-8 md:gap-12`}>
+  <div className={`flex flex-col md:flex-row ${reverse ? 'md:flex-row-reverse' : ''} items-center justify-center gap-8 md:gap-12`}>
     
-    {/* Imagem */}
-    <div className="w-full md:w-1/2">
+    {/* --- Container da Imagem (Solução Recomendada) --- */}
+    <div className="w-full max-w-[500px] aspect-[5/4] relative rounded-lg shadow-lg overflow-hidden">
+      {/* Usamos 'fill' para que a imagem preencha o container pai.
+        O tamanho e a proporção agora são controlados pelo div acima.
+      */}
       <Image 
         src={service.imageSrc} 
         alt={service.title}
-        width={500}
-        height={400}
-        className="rounded-lg object-cover shadow-lg"
+        fill 
+        className="object-cover"
       />
     </div>
 
     {/* Conteúdo */}
-    <div className="w-full md:w-1/2">
+    <div className="w-full md:max-w-[500px]"> {/* Opcional: limitar a largura do texto também */}
       <h3 className={`text-3xl font-bold text-${accentColor}`}>{service.title}</h3>
       <p className="mt-4 text-lg text-foreground/80">{service.description}</p>
       <ul className="mt-6 space-y-2 list-disc list-inside">

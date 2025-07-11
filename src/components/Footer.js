@@ -17,9 +17,6 @@ export default function Footer() {
         <p>
           &copy; {currentYear} AWPCS. Todos os direitos reservados.
         </p>
-        <p className="text-sm mt-2">
-          Desenvolvido com Next.js e Tailwind CSS.
-        </p>
       </div>
     </footer>
   );
